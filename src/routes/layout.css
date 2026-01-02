@@ -1,121 +1,227 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
-@import "tw-animate-css";
+/* Import the Bakery Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+	--radius: 0.75rem;
+
+	/* Warm Bakery Palette - Light Mode */
+	--background: hsl(30 25% 97%);
+	--foreground: hsl(25 30% 12%);
+
+	--card: hsl(30 20% 99%);
+	--card-foreground: hsl(25 30% 12%);
+
+	--popover: hsl(30 20% 99%);
+	--popover-foreground: hsl(25 30% 12%);
+
+	/* Rich Chocolate Primary */
+	--primary: hsl(25 45% 25%);
+	--primary-foreground: hsl(30 25% 97%);
+
+	/* Soft Cream Secondary */
+	--secondary: hsl(35 30% 92%);
+	--secondary-foreground: hsl(25 30% 20%);
+
+	/* Warm Muted Tones */
+	--muted: hsl(30 15% 90%);
+	--muted-foreground: hsl(25 15% 45%);
+
+	/* Blush Accent */
+	--accent: hsl(15 50% 85%);
+	--accent-foreground: hsl(25 45% 20%);
+
+	--destructive: hsl(0 84.2% 60.2%);
+	--destructive-foreground: hsl(210 40% 98%);
+
+	--border: hsl(30 20% 88%);
+	--input: hsl(30 20% 88%);
+	--ring: hsl(25 45% 35%);
+
+	/* Chart colors adapted to warm tones */
+	--chart-1: hsl(25 50% 18%); /* Chocolate */
+	--chart-2: hsl(30 60% 50%); /* Caramel */
+	--chart-3: hsl(15 60% 92%); /* Blush */
+	--chart-4: hsl(35 35% 95%); /* Cream */
+	--chart-5: hsl(25 35% 35%); /* Light Chocolate */
+
+	/* Custom Bakery Tokens */
+	--cream: hsl(35 35% 95%);
+	--chocolate: hsl(25 50% 18%);
+	--chocolate-light: hsl(25 35% 35%);
+	--caramel: hsl(30 60% 50%);
+	--blush: hsl(15 60% 92%);
+	--espresso: hsl(25 40% 12%);
+
+	/* Sidebar */
+	--sidebar: hsl(30 25% 97%);
+	--sidebar-foreground: hsl(25 30% 12%);
+	--sidebar-primary: hsl(25 45% 25%);
+	--sidebar-primary-foreground: hsl(30 25% 97%);
+	--sidebar-accent: hsl(35 30% 92%);
+	--sidebar-accent-foreground: hsl(25 30% 20%);
+	--sidebar-border: hsl(30 20% 88%);
+	--sidebar-ring: hsl(25 45% 35%);
+
+	/* Shadows */
+	--shadow-soft: 0 4px 20px -4px hsl(25 30% 12% / 0.08);
+	--shadow-elevated: 0 12px 40px -8px hsl(25 30% 12% / 0.12);
+	--shadow-glow: 0 0 40px hsl(30 60% 50% / 0.15);
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+	/* Warm Bakery Palette - Dark Mode */
+	--background: hsl(25 25% 8%);
+	--foreground: hsl(30 20% 95%);
+
+	--card: hsl(25 22% 12%);
+	--card-foreground: hsl(30 20% 95%);
+
+	--popover: hsl(25 22% 12%);
+	--popover-foreground: hsl(30 20% 95%);
+
+	--primary: hsl(35 40% 75%);
+	--primary-foreground: hsl(25 30% 10%);
+
+	--secondary: hsl(25 20% 18%);
+	--secondary-foreground: hsl(30 20% 90%);
+
+	--muted: hsl(25 18% 20%);
+	--muted-foreground: hsl(30 15% 60%);
+
+	--accent: hsl(30 30% 25%);
+	--accent-foreground: hsl(30 20% 90%);
+
+	--destructive: hsl(0 62.8% 30.6%);
+	--destructive-foreground: hsl(210 40% 98%);
+
+	--border: hsl(25 18% 20%);
+	--input: hsl(25 18% 20%);
+	--ring: hsl(35 40% 60%);
+
+	/* Charts Dark */
+	--chart-1: hsl(35 30% 80%);
+	--chart-2: hsl(30 50% 55%);
+	--chart-3: hsl(15 25% 20%);
+	--chart-4: hsl(30 15% 15%);
+	--chart-5: hsl(30 25% 60%);
+
+	/* Custom Tokens Dark */
+	--cream: hsl(30 15% 15%);
+	--chocolate: hsl(35 30% 80%);
+	--chocolate-light: hsl(30 25% 60%);
+	--caramel: hsl(30 50% 55%);
+	--blush: hsl(15 25% 20%);
+	--espresso: hsl(30 20% 90%);
+
+	--sidebar: hsl(25 25% 10%);
+	--sidebar-foreground: hsl(30 20% 95%);
+	--sidebar-primary: hsl(35 40% 75%);
+	--sidebar-primary-foreground: hsl(25 30% 10%);
+	--sidebar-accent: hsl(25 20% 18%);
+	--sidebar-accent-foreground: hsl(30 20% 90%);
+	--sidebar-border: hsl(25 18% 20%);
+	--sidebar-ring: hsl(35 40% 60%);
 }
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+	/* Radius */
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	/* Font Families */
+	--font-sans: 'Raleway', sans-serif;
+	--font-display: 'Raleway', sans-serif;
+
+	/* Standard Semantic Colors */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	/* Charts */
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+
+	/* Custom Bakery Colors */
+	--color-cream: var(--cream);
+	--color-chocolate: var(--chocolate);
+	--color-chocolate-light: var(--chocolate-light);
+	--color-caramel: var(--caramel);
+	--color-blush: var(--blush);
+	--color-espresso: var(--espresso);
+
+	/* Sidebar */
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+
+	/* Shadows */
+	--shadow-soft: var(--shadow-soft);
+	--shadow-elevated: var(--shadow-elevated);
+	--shadow-glow: var(--shadow-glow);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background font-sans text-foreground antialiased;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-display tracking-tight;
+	}
+}
+
+/* Custom Components & Utilities */
+@layer components {
+	.text-gradient {
+		@apply bg-linear-to-r from-chocolate to-chocolate-light bg-clip-text text-transparent;
+	}
+
+	.glass {
+		@apply border border-border/50 bg-card/80 backdrop-blur-md;
+	}
+
+	.hover-lift {
+		@apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-elevated;
+	}
+
+	.hover-glow {
+		@apply transition-all duration-300 hover:shadow-glow;
+	}
 }

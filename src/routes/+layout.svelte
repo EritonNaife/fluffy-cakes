@@ -1,9 +1,16 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-
-	let { children } = $props();
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+<svelte:head>
+	<title>Fluffy Cakes</title>
+</svelte:head>
+
+<main class="min-h-screen">
+	<Navbar />
+	<div class="min-h-screen"><slot /></div>
+
+	<Footer />
+</main>
