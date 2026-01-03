@@ -5,6 +5,7 @@
 	import { ArrowRight, Sparkles, Calendar, MessageCircle } from '@lucide/svelte';
 	import { Button } from '$lib/components/ui/button';
 	import cupcakesImg from '$lib/assets/cupcakes.jpg';
+	import herocakeImg from '$lib/assets/high-angle-delicious-chocolate-cake-concept.jpg';
 	import weddingCakeImg from '$lib/assets/wedding-cake.jpg';
 
 	interface Testimonial {
@@ -79,7 +80,7 @@
 <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
 	<div class="absolute inset-0">
 		<img
-			src="$lib/assets/high-angle-delicious-chocolate-cake-concept.jpg"
+			src={herocakeImg}
 			alt="Beautiful artisanal chocolate cake with caramel drip"
 			class="h-full w-full object-cover"
 		/>
