@@ -134,7 +134,7 @@
 	</div>
 
 	<div in:fade={{ delay: 1000 }} class="absolute bottom-8 left-1/2 -translate-x-1/2">
-		<div class="flex flex-col items-center gap-2 py-8 text-chocolate-light">
+		<div class="flex flex-col items-center gap-2 text-chocolate-light">
 			<span class="text-xs tracking-wider uppercase">Scroll to explore</span>
 			<div
 				class="animate-bounce-slow flex h-10 w-6 justify-center rounded-full border-2 border-chocolate-light/50 pt-2"
