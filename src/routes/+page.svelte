@@ -24,7 +24,7 @@
 		},
 		{
 			title: 'Ready to Eat',
-			description: 'Cupcakes, brownies, and treats available for next-day pickup.',
+			description: 'Cake slices, cake in a pot, and treats available for next-day pickup.',
 			image: cupcakesImg,
 			link: '/menu',
 			cta: 'View Menu'
@@ -84,8 +84,8 @@
 			class="h-full w-full object-cover"
 		/>
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background"
-		/>
+			class="absolute inset-0 bg-linear-to-b from-background/60 via-background/40 to-background"
+		></div>
 	</div>
 
 	<div class="relative z-10 container pt-24 pb-16">
@@ -95,7 +95,7 @@
 					class="mb-6 inline-flex items-center gap-2 rounded-full bg-blush/80 px-4 py-2 text-sm font-medium text-chocolate backdrop-blur-sm"
 				>
 					<Sparkles class="h-4 w-4" />
-					Artisanal Home Bakery
+					Home Bakery
 				</span>
 			</div>
 
@@ -134,19 +134,19 @@
 	</div>
 
 	<div in:fade={{ delay: 1000 }} class="absolute bottom-8 left-1/2 -translate-x-1/2">
-		<div class="flex flex-col items-center gap-2 text-chocolate-light">
+		<div class="flex flex-col items-center gap-2 py-8 text-chocolate-light">
 			<span class="text-xs tracking-wider uppercase">Scroll to explore</span>
 			<div
 				class="animate-bounce-slow flex h-10 w-6 justify-center rounded-full border-2 border-chocolate-light/50 pt-2"
 			>
-				<div class="h-1.5 w-1.5 rounded-full bg-chocolate-light/50" />
+				<div class="h-1.5 w-1.5 rounded-full bg-chocolate-light/50"></div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="bg-secondary/30 py-24">
-	<div class="container mx-auto max-w-[1200px] p-8">
+	<div class="container mx-auto max-w-300 p-8">
 		<div in:fly={{ y: 20, duration: 500 }} class="mb-16 text-center">
 			<h2 class="mb-4 font-display text-4xl font-bold text-chocolate md:text-5xl">
 				What Are You Craving?
@@ -163,7 +163,7 @@
 						href={category.link}
 						class="group relative block overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-500 hover:shadow-elevated"
 					>
-						<div class="aspect-[4/3] overflow-hidden">
+						<div class="aspect-4/3 overflow-hidden">
 							<img
 								src={category.image}
 								alt={category.title}
@@ -172,7 +172,7 @@
 						</div>
 
 						<div
-							class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent"
+							class="absolute inset-0 bg-linear-to-t from-espresso/80 via-espresso/20 to-transparent"
 						></div>
 
 						<div class="absolute right-0 bottom-0 left-0 p-8">
@@ -195,7 +195,7 @@
 </section>
 
 <section class="py-24">
-	<div class="container mx-auto max-w-[1200px] p-8">
+	<div class="container mx-auto max-w-300 p-8">
 		<div use:inview on:inview_change={handleHeaderInView} class="mb-16 text-center">
 			{#if headerVisible}
 				<div in:fly={{ y: 20, duration: 500, easing: quintOut }}>

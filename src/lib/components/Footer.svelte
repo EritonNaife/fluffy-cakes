@@ -15,7 +15,7 @@
 </script>
 
 <footer class="border-t border-border bg-secondary/50">
-	<div class="container mx-auto max-w-[1200px] py-16">
+	<div class="container mx-auto max-w-300 py-16">
 		<div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 			<!-- Brand -->
 			<div class="lg:col-span-2">
@@ -134,8 +134,8 @@
 							<circle cx="12" cy="10" r="3" />
 						</svg>
 						<span>
-							123 Baker Street<br />
-							Sweet Town, ST 12345
+							Rua Formosa 339<br />
+							4000-252 Porto
 						</span>
 					</div>
 					<p class="text-sm">
