@@ -79,7 +79,7 @@
 <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
 	<div class="absolute inset-0">
 		<img
-			src="/src/lib/assets/high-angle-delicious-chocolate-cake-concept.jpg"
+			src="$lib/assets/high-angle-delicious-chocolate-cake-concept.jpg"
 			alt="Beautiful artisanal chocolate cake with caramel drip"
 			class="h-full w-full object-cover"
 		/>
